@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
 
-  height: 100vh;
+  height: 150vh; /* testing */
   color: aliceblue;
 
   display: flex;
@@ -16,12 +16,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  min-height: 500px;
 }
 
 .header {
   border-bottom: 2px solid blue;
+}
+
+.navbar {
+  height: 50px;
 }
 
 .content {
@@ -29,7 +31,6 @@ body {
   border: 1px solid;
 
   margin: 0 15%;
-  min-height: 1200px;
 }
 
 .article {
@@ -38,6 +39,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 900px;
 }
 
 .suggest-article-container {
@@ -86,5 +89,5 @@ a {
 
 .pin-suggest-article {
   position: sticky;
-  top: 500px;
+  top: 50px;
 }
