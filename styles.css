@@ -1,0 +1,90 @@
+body {
+  background-color: #2e2c2c;
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+  color: aliceblue;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header,
+.navbar,
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 500px;
+}
+
+.header {
+  border-bottom: 2px solid blue;
+}
+
+.content {
+  display: flex;
+  border: 1px solid;
+
+  margin: 0 15%;
+  min-height: 1200px;
+}
+
+.article {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suggest-article-container {
+  width: 400px;
+}
+
+.suggest-article-list {
+  border: 2px solid blue;
+}
+
+/* remove '.' in ol numbering ref: https://stackoverflow.com/questions/11946098/how-to-remove-dot-after-number-in-ordered-list-items-in-ol-li/11946109 */
+ol.suggest-article-list {
+  counter-reset: item;
+  list-style-type: none;
+
+  margin: 0;
+}
+
+li.suggest-article-list-item {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+li.suggest-article-list-item::before {
+  content: counter(item) "  ";
+  counter-increment: item;
+
+  color: aqua;
+  font-size: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  border: 2px solid red;
+  width: 100%;
+}
+
+.pin-top-fixed {
+  position: sticky;
+  top: 0;
+}
+
+.pin-suggest-article {
+  position: sticky;
+  top: 500px;
+}
