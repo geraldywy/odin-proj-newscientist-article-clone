@@ -3,11 +3,23 @@ body {
   margin: 0;
   padding: 0;
 
-  height: 150vh; /* testing */
+  height: 200vh; /* testing */
   color: aliceblue;
 
   display: flex;
   flex-direction: column;
+
+  font-family: Titillium Web, Helvetica, Trebuchet MS, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 .header,
@@ -20,6 +32,34 @@ body {
 
 .header {
   border-bottom: 2px solid blue;
+  padding: 20px 0;
+  gap: 5%;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.brandname {
+  font-size: 60px;
+}
+
+.subscribe-btn {
+  width: 15rem;
+  font-size: 0.9em;
+
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+
+  background-color: rgb(61, 135, 148);
+  border: 0;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: inherit;
 }
 
 .navbar {
@@ -29,8 +69,15 @@ body {
 .content {
   display: flex;
   border: 1px solid;
+}
 
-  margin: 0 15%;
+.inner-content {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 70rem;
+
+  margin: 0 auto;
 }
 
 .article {
@@ -40,7 +87,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  height: 900px;
+  min-width: 30rem;
 }
 
 .suggest-article-container {
