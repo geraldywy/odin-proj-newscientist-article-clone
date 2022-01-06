@@ -8,8 +8,15 @@ body {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  font-family: Titillium Web, Helvetica, Trebuchet MS, Arial, sans-serif;
+  font-family: "Titillium Web", Helvetica, Trebuchet MS, Arial, sans-serif;
+
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 75rem;
 }
 
 h1,
@@ -23,17 +30,16 @@ p {
 }
 
 .header,
-.navbar,
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .header {
-  border-bottom: 2px solid blue;
-  padding: 20px 0;
-  gap: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-left {
@@ -41,6 +47,14 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.header-center {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .brandname {
@@ -63,21 +77,54 @@ p {
 }
 
 .navbar {
-  height: 50px;
+  display: flex;
+  height: 2rem;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  font-size: 1.1rem;
+  background-color: #2e2c2c;
+}
+
+#space {
+  border-bottom: 0;
+}
+
+#more::after {
+  content: "»";
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-left: 10px;
+  transform: rotate(90deg);
+  vertical-align: middle;
+}
+
+.dull {
+  color: rgb(184, 172, 153);
+}
+
+.highlight {
+  color: rgb(81, 181, 199);
+}
+
+.navbar-item {
+  border-bottom: 2px solid grey;
+}
+
+.navbar-tools {
+  width: 200px;
+
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .content {
   display: flex;
-  border: 1px solid;
-}
-
-.inner-content {
-  display: flex;
   flex-wrap: wrap;
 
-  max-width: 70rem;
-
-  margin: 0 auto;
+  padding-top: 1.5rem;
 }
 
 .article {
@@ -95,7 +142,6 @@ p {
 }
 
 .suggest-article-list {
-  border: 2px solid blue;
 }
 
 /* remove '.' in ol numbering ref: https://stackoverflow.com/questions/11946098/how-to-remove-dot-after-number-in-ordered-list-items-in-ol-li/11946109 */
@@ -124,11 +170,6 @@ a {
   color: inherit;
 }
 
-.navbar {
-  border: 2px solid red;
-  width: 100%;
-}
-
 .pin-top-fixed {
   position: sticky;
   top: 0;
@@ -136,5 +177,5 @@ a {
 
 .pin-suggest-article {
   position: sticky;
-  top: 50px;
+  top: 2rem;
 }
