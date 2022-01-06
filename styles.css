@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
 
-  height: 200vh; /* testing */
+  height: 300vh; /* testing */
   color: aliceblue;
 
   display: flex;
@@ -58,7 +58,11 @@ p {
 }
 
 .brandname {
-  font-size: 60px;
+  font-size: 3.6rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .subscribe-btn {
@@ -85,6 +89,17 @@ p {
 
   font-size: 1.1rem;
   background-color: #2e2c2c;
+
+  z-index: 1;
+}
+
+/* small screens */
+@media only screen and (max-width: 64.063rem) {
+  .navbar,
+  .header-left,
+  .header-right {
+    display: none;
+  }
 }
 
 #space {
@@ -114,7 +129,7 @@ p {
 }
 
 .navbar-tools {
-  width: 200px;
+  width: 10rem;
 
   display: flex;
   justify-content: space-evenly;
@@ -122,26 +137,60 @@ p {
 
 .content {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 
   padding-top: 1.5rem;
 }
 
-.article {
+.article-container {
   flex: 1;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  min-width: 30rem;
+  min-width: 50rem;
+
+  font-size: 1.14rem;
 }
 
 .suggest-article-container {
-  width: 400px;
+  width: 23rem;
+  margin-left: 1rem;
 }
 
-.suggest-article-list {
+.suggest-article {
+  background-color: rgb(73, 71, 71);
+}
+
+.suggest-article-category {
+  display: flex;
+  align-items: center;
+
+  border-bottom: 2px solid grey;
+}
+
+.suggest-article-category-inner {
+  flex: 1;
+  padding: 0.7rem;
+  text-align: center;
+
+  font-size: 0.8rem;
+
+  border-right: 2px solid grey;
+}
+
+.suggest-article-category-inner:nth-child(1) {
+  background-color: rgb(61, 135, 148);
+}
+
+.suggest-article-category-inner:nth-last-child(1) {
+  border: 0;
+}
+
+.category-text {
+  text-transform: uppercase;
 }
 
 /* remove '.' in ol numbering ref: https://stackoverflow.com/questions/11946098/how-to-remove-dot-after-number-in-ordered-list-items-in-ol-li/11946109 */
@@ -149,20 +198,29 @@ ol.suggest-article-list {
   counter-reset: item;
   list-style-type: none;
 
+  padding: 0;
   margin: 0;
 }
 
 li.suggest-article-list-item {
   display: flex;
-  flex-direction: row-reverse;
+
+  align-items: center;
+
+  font-size: 1.2rem;
+  padding: 0.5rem;
+
+  border-bottom: 2px solid grey;
 }
 
-li.suggest-article-list-item::before {
+li.suggest-article-list-item::after {
   content: counter(item) "  ";
   counter-increment: item;
 
   color: aqua;
-  font-size: 40px;
+
+  font-size: 2.3rem;
+  margin-left: 1.4rem;
 }
 
 a {

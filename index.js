@@ -7,7 +7,7 @@
 
 const navBar = document.querySelector('.navbar');
 const header = document.querySelector('.header');
-const suggestArticles = document.querySelector('.suggest-article-list');
+const suggestArticles = document.querySelector('.suggest-article');
 
 let pageJustLoaded = true;
 
