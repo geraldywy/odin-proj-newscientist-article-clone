@@ -25,3 +25,8 @@ const toggleNavbarPin = new IntersectionObserver((entries) => {
 });
 
 toggleNavbarPin.observe(header);
+
+const scrollTopIcon = document.querySelector('#scroll-top-icon');
+scrollTopIcon.addEventListener('click', () => {
+  window.scroll(0, 0);
+});
